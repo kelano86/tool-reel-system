@@ -1,0 +1,23 @@
+{
+  "name": "reel-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio src/index.ts --port 3300",
+    "render": "remotion render ToolReel out/reel.mp4",
+    "still": "remotion still ToolReel out/frame.png --frame=60",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.512",
+    "@remotion/media": "4.0.512",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.512"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "playwright-core": "^1.62.1",
+    "typescript": "5.8.2"
+  }
+}

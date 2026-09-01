@@ -1,0 +1,61 @@
+{
+  "_note": "Every fact here was read off the vendors' own pages on 2026-08-30. Components render from this file; nothing on screen may be hand-typed.",
+  "jitter": {
+    "name": "Jitter",
+    "domain": "jitter.video",
+    "icon": "jitter/icon512.png",
+    "exportClaim": "Export to 4K, GIF, Lottie",
+    "freeClaim": "Jitter is entirely free to use with the Free plan",
+    "videos": {
+      "hero": "jitter/hero.mp4",
+      "suite": "jitter/suite.mp4",
+      "export": "jitter/export.mp4"
+    },
+    "presets": [
+      "Elastic",
+      "Bounce",
+      "Natural",
+      "Smooth"
+    ]
+  },
+  "animos": {
+    "name": "animos",
+    "domain": "animos.app",
+    "icon": "animos/favicon.png",
+    "categories": [
+      "3D & Perspective",
+      "Multiscene",
+      "Isometric",
+      "Orbit",
+      "Carousel & Flow",
+      "Grid",
+      "Spotlight & Focus",
+      "Reveal & Wipe",
+      "Stack & Scatter"
+    ],
+    "categoryCount": 9,
+    "templateCount": 60,
+    "resolutions": [
+      "720p",
+      "1080p",
+      "2K",
+      "4K",
+      "8K"
+    ],
+    "ratios": [
+      "16:9",
+      "4:3",
+      "1:1",
+      "4:5",
+      "3:4",
+      "9:16"
+    ],
+    "exportClaim": "Render frame-exact from 720p up to 8K, straight from the browser",
+    "freeClaim": "720p export is free forever",
+    "claudeClaim": "built with Claude Code",
+    "videos": {
+      "preview": "animos/preview.mp4",
+      "tpl1": "animos/tpl1.mp4"
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "source": "footage.mov",
+  "title": "STOP SHIPPING FLAT MOCKUPS",
+  "keyword": "ANIMATE",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "speed": 1.05,
+  "beatGap": 0,
+  "splitRatio": 0.42,
+  "beats": [
+    {
+      "key": "hook",
+      "label": "HOOK",
+      "srcFrom": 5.9,
+      "srcTo": 11.05,
+      "layout": "stage",
+      "line": "If you want to create a beautiful website with animations, here are two tools that will 10x your results.",
+      "emphasis": "10x",
+      "shot": null,
+      "shots": [
+        {
+          "to": 170,
+          "kind": "hookintro",
+          "ground": "#F4F5F1",
+          "face": true
+        },
+        {
+          "to": 294,
+          "kind": "facefull",
+          "ground": "#050706",
+          "face": true
+        }
+      ]
+    },
+    {
+      "key": "jitter1",
+      "label": "ITEM 1 NAME",
+      "srcFrom": 29.93,
+      "srcTo": 35.4,
+      "layout": "stage",
+      "line": "The first is Jitter, it's a motion editor that runs in your browser and exports 4K videos and GIFs.",
+      "emphasis": "Jitter",
+      "shot": null,
+      "shots": [
+        {
+          "to": 98,
+          "kind": "title",
+          "ground": "#F9F9F9",
+          "face": false,
+          "tool": "jitter"
+        },
+        {
+          "to": 211,
+          "kind": "vidcard",
+          "ground": "#050706",
+          "face": true,
+          "tool": "jitter",
+          "vid": "hero",
+          "from": 8.4
+        },
+        {
+          "to": 313,
+          "kind": "vidcard",
+          "ground": "#050706",
+          "face": true,
+          "tool": "jitter",
+          "vid": "export",
+          "from": 0
+        }
+      ]
+    },
+    {
+      "key": "jitter2",
+      "label": "ITEM 1 HOW",
+      "srcFrom": 35.4,
+      "srcTo": 41.45,
+      "layout": "stage",
+      "line": "You just drop an animation preset onto a layer, so your toggles, sliders and buttons look like a $10,000 website.",
+      "emphasis": "preset",
+      "shot": null,
+      "shots": [
+        {
+          "to": 151,
+          "kind": "presetdrop",
+          "ground": "#F4F5F1",
+          "face": false,
+          "landAt": 100
+        },
+        {
+          "to": 240,
+          "kind": "uikit",
+          "ground": "#F4F5F1",
+          "face": false
+        },
+        {
+          "to": 346,
+          "kind": "vidcard",
+          "ground": "#050706",
+          "face": true,
+          "tool": "jitter",
+          "vid": "suite",
+          "from": 1.0
+        }
+      ]
+    },
+    {
+      "key": "animos1",
+      "label": "ITEM 2 NAME",
+      "srcFrom": 49.19,
+      "srcTo": 55.26,
+      "layout": "stage",
+      "line": "And the second one is animos, which is basically a template library for motion designs, built entirely with Claude Code.",
+      "emphasis": "animos",
+      "shot": null,
+      "shots": [
+        {
+          "to": 99,
+          "kind": "title",
+          "ground": "#F9F9F9",
+          "face": false,
+          "tool": "animos"
+        },
+        {
+          "to": 218,
+          "kind": "vidcard",
+          "ground": "#050706",
+          "face": true,
+          "tool": "animos",
+          "vid": "preview",
+          "from": 1.5
+        },
+        {
+          "to": 347,
+          "kind": "claudecard",
+          "ground": "#050706",
+          "face": false
+        }
+      ]
+    },
+    {
+      "key": "animos2",
+      "label": "ITEM 2 HOW",
+      "srcFrom": 55.26,
+      "srcTo": 64.2,
+      "layout": "stage",
+      "line": "So you just drop an image, pick from eight categories of presets, and export up to 8K in five aspect ratios, so you're not cutting the same clips for every platform.",
+      "emphasis": "8K",
+      "shot": null,
+      "shots": [
+        {
+          "to": 105,
+          "kind": "imagedrop",
+          "ground": "#F4F5F1",
+          "face": false,
+          "landAt": 46
+        },
+        {
+          "to": 216,
+          "kind": "catroll",
+          "ground": "#050706",
+          "face": false
+        },
+        {
+          "to": 267,
+          "kind": "exportladder",
+          "ground": "#F4F5F1",
+          "face": false
+        },
+        {
+          "to": 419,
+          "kind": "ratiomorph",
+          "ground": "#F4F5F1",
+          "face": false
+        },
+        {
+          "to": 511,
+          "kind": "vidcard",
+          "ground": "#050706",
+          "face": true,
+          "tool": "animos",
+          "vid": "preview",
+          "from": 18
+        }
+      ]
+    },
+    {
+      "key": "payoff",
+      "label": "PAYOFF",
+      "srcFrom": 84.74,
+      "srcTo": 87.84,
+      "layout": "stage",
+      "line": "Both of them run completely in the browser and have great free plans.",
+      "emphasis": "browser",
+      "shot": null,
+      "shots": [
+        {
+          "to": 99,
+          "kind": "duo",
+          "ground": "#050706",
+          "face": true
+        },
+        {
+          "to": 177,
+          "kind": "facefull",
+          "ground": "#050706",
+          "face": true
+        }
+      ]
+    },
+    {
+      "key": "cta",
+      "label": "CTA",
+      "srcFrom": 87.84,
+      "srcTo": 92.8,
+      "layout": "stage",
+      "line": "So if you want to try these yourself, just comment ANIMATE down below and I will send you both of the links directly.",
+      "emphasis": "ANIMATE",
+      "shot": null,
+      "shots": [
+        {
+          "to": 102,
+          "kind": "facefull",
+          "ground": "#050706",
+          "face": true
+        },
+        {
+          "to": 283,
+          "kind": "ctacard",
+          "ground": "#F4F5F1",
+          "face": true
+        }
+      ]
+    }
+  ]
+}

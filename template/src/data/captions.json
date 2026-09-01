@@ -1,0 +1,496 @@
+{
+ "hook": [
+  {
+   "text": "If you",
+   "from": 0,
+   "to": 15,
+   "emph": false
+  },
+  {
+   "text": "want to",
+   "from": 15,
+   "to": 26,
+   "emph": false
+  },
+  {
+   "text": "create a",
+   "from": 26,
+   "to": 53,
+   "emph": false
+  },
+  {
+   "text": "beautiful website",
+   "from": 53,
+   "to": 99,
+   "emph": false
+  },
+  {
+   "text": "with animations,",
+   "from": 99,
+   "to": 170,
+   "emph": false
+  },
+  {
+   "text": "here are",
+   "from": 170,
+   "to": 182,
+   "emph": false
+  },
+  {
+   "text": "two tools",
+   "from": 182,
+   "to": 217,
+   "emph": false
+  },
+  {
+   "text": "that will",
+   "from": 217,
+   "to": 234,
+   "emph": false
+  },
+  {
+   "text": "10x",
+   "from": 234,
+   "to": 255,
+   "emph": true
+  },
+  {
+   "text": "your results.",
+   "from": 255,
+   "to": 294,
+   "emph": false
+  }
+ ],
+ "jitter1": [
+  {
+   "text": "The first",
+   "from": 0,
+   "to": 23,
+   "emph": false
+  },
+  {
+   "text": "is",
+   "from": 23,
+   "to": 39,
+   "emph": false
+  },
+  {
+   "text": "Jitter,",
+   "from": 39,
+   "to": 80,
+   "emph": true
+  },
+  {
+   "text": "it's a",
+   "from": 80,
+   "to": 98,
+   "emph": false
+  },
+  {
+   "text": "motion editor",
+   "from": 98,
+   "to": 136,
+   "emph": false
+  },
+  {
+   "text": "that runs",
+   "from": 136,
+   "to": 160,
+   "emph": false
+  },
+  {
+   "text": "in your",
+   "from": 160,
+   "to": 177,
+   "emph": false
+  },
+  {
+   "text": "browser and",
+   "from": 177,
+   "to": 211,
+   "emph": false
+  },
+  {
+   "text": "exports 4K",
+   "from": 211,
+   "to": 256,
+   "emph": false
+  },
+  {
+   "text": "videos and",
+   "from": 256,
+   "to": 289,
+   "emph": false
+  },
+  {
+   "text": "GIFs.",
+   "from": 289,
+   "to": 313,
+   "emph": false
+  }
+ ],
+ "jitter2": [
+  {
+   "text": "You just",
+   "from": 0,
+   "to": 30,
+   "emph": false
+  },
+  {
+   "text": "drop an",
+   "from": 30,
+   "to": 50,
+   "emph": false
+  },
+  {
+   "text": "animation",
+   "from": 50,
+   "to": 70,
+   "emph": false
+  },
+  {
+   "text": "preset",
+   "from": 70,
+   "to": 91,
+   "emph": true
+  },
+  {
+   "text": "onto a",
+   "from": 91,
+   "to": 120,
+   "emph": false
+  },
+  {
+   "text": "layer, so",
+   "from": 120,
+   "to": 151,
+   "emph": false
+  },
+  {
+   "text": "your toggles,",
+   "from": 151,
+   "to": 185,
+   "emph": false
+  },
+  {
+   "text": "sliders and",
+   "from": 185,
+   "to": 210,
+   "emph": false
+  },
+  {
+   "text": "buttons look",
+   "from": 210,
+   "to": 240,
+   "emph": false
+  },
+  {
+   "text": "like a",
+   "from": 240,
+   "to": 263,
+   "emph": false
+  },
+  {
+   "text": "$10,000",
+   "from": 263,
+   "to": 302,
+   "emph": false
+  },
+  {
+   "text": "website.",
+   "from": 302,
+   "to": 346,
+   "emph": false
+  }
+ ],
+ "animos1": [
+  {
+   "text": "And the",
+   "from": 0,
+   "to": 19,
+   "emph": false
+  },
+  {
+   "text": "second one",
+   "from": 19,
+   "to": 48,
+   "emph": false
+  },
+  {
+   "text": "is",
+   "from": 48,
+   "to": 63,
+   "emph": false
+  },
+  {
+   "text": "animos,",
+   "from": 63,
+   "to": 99,
+   "emph": true
+  },
+  {
+   "text": "which is",
+   "from": 99,
+   "to": 110,
+   "emph": false
+  },
+  {
+   "text": "basically a",
+   "from": 110,
+   "to": 147,
+   "emph": false
+  },
+  {
+   "text": "template library",
+   "from": 147,
+   "to": 186,
+   "emph": false
+  },
+  {
+   "text": "for motion",
+   "from": 186,
+   "to": 218,
+   "emph": false
+  },
+  {
+   "text": "designs, built",
+   "from": 218,
+   "to": 267,
+   "emph": false
+  },
+  {
+   "text": "entirely with",
+   "from": 267,
+   "to": 318,
+   "emph": false
+  },
+  {
+   "text": "Claude Code.",
+   "from": 318,
+   "to": 347,
+   "emph": false
+  }
+ ],
+ "animos2": [
+  {
+   "text": "So you",
+   "from": 0,
+   "to": 22,
+   "emph": false
+  },
+  {
+   "text": "just drop",
+   "from": 22,
+   "to": 42,
+   "emph": false
+  },
+  {
+   "text": "an image,",
+   "from": 42,
+   "to": 88,
+   "emph": false
+  },
+  {
+   "text": "pick from",
+   "from": 88,
+   "to": 105,
+   "emph": false
+  },
+  {
+   "text": "eight categories",
+   "from": 105,
+   "to": 145,
+   "emph": false
+  },
+  {
+   "text": "of presets,",
+   "from": 145,
+   "to": 189,
+   "emph": false
+  },
+  {
+   "text": "and export",
+   "from": 189,
+   "to": 216,
+   "emph": false
+  },
+  {
+   "text": "up to",
+   "from": 216,
+   "to": 239,
+   "emph": false
+  },
+  {
+   "text": "8K",
+   "from": 239,
+   "to": 267,
+   "emph": true
+  },
+  {
+   "text": "in five",
+   "from": 267,
+   "to": 305,
+   "emph": false
+  },
+  {
+   "text": "aspect ratio,",
+   "from": 305,
+   "to": 369,
+   "emph": false
+  },
+  {
+   "text": "so you're",
+   "from": 369,
+   "to": 397,
+   "emph": false
+  },
+  {
+   "text": "not cutting",
+   "from": 397,
+   "to": 419,
+   "emph": false
+  },
+  {
+   "text": "the same",
+   "from": 419,
+   "to": 439,
+   "emph": false
+  },
+  {
+   "text": "clips for",
+   "from": 439,
+   "to": 464,
+   "emph": false
+  },
+  {
+   "text": "every platform.",
+   "from": 464,
+   "to": 511,
+   "emph": false
+  }
+ ],
+ "payoff": [
+  {
+   "text": "Both of",
+   "from": 0,
+   "to": 21,
+   "emph": false
+  },
+  {
+   "text": "them run",
+   "from": 21,
+   "to": 41,
+   "emph": false
+  },
+  {
+   "text": "completely in",
+   "from": 41,
+   "to": 79,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "from": 79,
+   "to": 83,
+   "emph": false
+  },
+  {
+   "text": "browser",
+   "from": 83,
+   "to": 99,
+   "emph": true
+  },
+  {
+   "text": "and have",
+   "from": 99,
+   "to": 123,
+   "emph": false
+  },
+  {
+   "text": "great free",
+   "from": 123,
+   "to": 149,
+   "emph": false
+  },
+  {
+   "text": "plans.",
+   "from": 149,
+   "to": 177,
+   "emph": false
+  }
+ ],
+ "cta": [
+  {
+   "text": "So if",
+   "from": 0,
+   "to": 27,
+   "emph": false
+  },
+  {
+   "text": "you want",
+   "from": 27,
+   "to": 38,
+   "emph": false
+  },
+  {
+   "text": "to try",
+   "from": 38,
+   "to": 55,
+   "emph": false
+  },
+  {
+   "text": "these yourself,",
+   "from": 55,
+   "to": 102,
+   "emph": false
+  },
+  {
+   "text": "just comment",
+   "from": 102,
+   "to": 115,
+   "emph": false
+  },
+  {
+   "text": "ANIMATE",
+   "from": 115,
+   "to": 146,
+   "emph": true
+  },
+  {
+   "text": "down below",
+   "from": 146,
+   "to": 174,
+   "emph": false
+  },
+  {
+   "text": "and I",
+   "from": 174,
+   "to": 197,
+   "emph": false
+  },
+  {
+   "text": "will send",
+   "from": 197,
+   "to": 210,
+   "emph": false
+  },
+  {
+   "text": "you both",
+   "from": 210,
+   "to": 225,
+   "emph": false
+  },
+  {
+   "text": "of the",
+   "from": 225,
+   "to": 242,
+   "emph": false
+  },
+  {
+   "text": "links directly.",
+   "from": 242,
+   "to": 283,
+   "emph": false
+  }
+ ]
+}
