@@ -21,7 +21,7 @@ a frame-by-frame teardown of the 2.5m-view Google video for the edit. Both live 
 
 > **Many short varied shots, not a few long ones.**
 
-His mean shot is **2.0 seconds** with a range of 0.26s to 3.43s. A beat of
+The studied creator's mean shot is **2.0 seconds**, range 0.26s to 3.43s. A beat of
 spoken script is not one shot, it is three to five. Every time the edit feels
 flat, the answer is almost always another cut with a different composition.
 
@@ -120,12 +120,13 @@ Always report the resulting wpm, not just the runtime.
 ## 2b. Voice mastering (always, this preset)
 
 The camera track is never used raw. Master it once into `public/voice.wav` and
-point the beat audio at that file; the video stays on `footage.mp4`, muted.
+point the beat audio at that file; the video stays on the camera original,
+muted.
 Preset locked after A/B rounds on real footage — use it as-is for every reel
 unless the creator asks for a change on a specific video:
 
 ```
-ffmpeg -y -i public\footage.mp4 -vn -af "highpass=f=75,afftdn=nr=12:nf=-32:tn=1,deesser,equalizer=f=260:t=q:w=1.2:g=-3,lowshelf=f=110:g=4,equalizer=f=4200:t=q:w=0.8:g=3,aexciter=amount=1.5:drive=8:freq=5500,highshelf=f=10000:g=-2,acompressor=threshold=-20dB:ratio=3:attack=6:release=150:makeup=3,alimiter=limit=-1.2dB:level=false" -ar 48000 public\voice.wav
+ffmpeg -y -i public/footage.mov -vn -af "highpass=f=75,afftdn=nr=12:nf=-32:tn=1,deesser,equalizer=f=260:t=q:w=1.2:g=-3,lowshelf=f=110:g=4,equalizer=f=4200:t=q:w=0.8:g=3,aexciter=amount=1.5:drive=8:freq=5500,highshelf=f=10000:g=-2,acompressor=threshold=-20dB:ratio=3:attack=6:release=150:makeup=3,alimiter=limit=-1.2dB:level=false" -ar 48000 public/voice.wav
 ```
 
 What it is, in order: rumble high-pass, FFT denoiser with noise tracking,
@@ -140,7 +141,7 @@ exciter adds highs by synthesizing harmonics from the mids, so it sharpens the
 voice without lifting the noise floor the way a shelf boost does.
 
 Wiring: every filter in the chain is time-invariant, so `voice.wav` shares
-`footage.mp4`'s timeline sample-for-sample — the per-beat `srcFrom` trims need
+the footage's timeline sample-for-sample — the per-beat `srcFrom` trims need
 no adjustment. In the beat audio component, change the fallback source from the
 camera file to the master (`staticFile(beat.audio ?? 'voice.wav')`); spliced
 beats keep their own pre-spliced files (re-splice those from voice.wav if the
@@ -294,10 +295,9 @@ for a change of state before reaching for an explanation.
 | "an actual Linux computer" | a terminal | a machine boots with the agent's mark **on its screen**, capabilities dock underneath |
 | "never loses your work when a session ends" | a save icon | the sandbox dies, the files do not move, a durable slab is revealed beneath them |
 
-**Where screenshots exist, mix rather than replace.** A screenshot shows what
-the thing looks like; an animation shows what it does. All stills is static, all
-animation looks like a cartoon rather than a product. When a repo ships several
-real screenshots, the question is what to build *around* them.
+**Where screenshots exist, mix rather than replace** (the rule from section 4).
+The question stops being what to draw and becomes what to build *around* the
+screenshots.
 
 ## 7. How every video opens (fixed)
 
@@ -836,7 +836,8 @@ other one.
 RVM is a recurrent video model, so the expectation is that it kills temporal
 crawl. **Measured on this footage it does not** - it scores slightly worse on
 frame-to-frame alpha change than rembg does. That is not a fault: rembg's
-number is low because the 3-tap blend is literally a temporal low-pass, and
+number is low because the 3-tap blend (a 3-frame average of the alpha
+channel) is literally a temporal low-pass, and
 RVM's is higher because its soft edge is made of individual hair strands that
 genuinely move. Note the smaller soft-edge area alongside it - the edge is
 tighter, not mushier.

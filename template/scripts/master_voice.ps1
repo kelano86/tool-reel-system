@@ -1,4 +1,4 @@
-﻿# Masters the camera audio into public/voice.wav â€” the composition plays this
+﻿# Masters the camera audio into public/voice.wav - the composition plays this
 # instead of footage.mov's raw track (see BeatAudio in src/ToolReel.tsx).
 # Same timeline as footage.mov: every filter is time-invariant, so the
 # per-beat srcFrom trims land on identical samples.

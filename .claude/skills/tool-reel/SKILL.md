@@ -286,15 +286,17 @@ written for contributors, not viewers.
 
 Three rules follow:
 
-1. **Plain English first, technical label second, mechanism never.** The Strix
-   hook says "attacks your vibe-coded app like a hacker", and only then does the
-   naming beat say "AI pen-testing tool". Jargon arrives after comprehension.
+1. **Plain English first, technical label second, mechanism never.** One
+   script's hook says "attacks your vibe-coded app like a hacker", and only
+   then does the naming beat say "AI pen-testing tool". Jargon arrives after
+   comprehension.
 2. **Jargon is never load-bearing.** Delete the technical word and the sentence
    must still say what you get. "A built-in MCP server that lets it connect
    directly with Claude Code" works even if MCP means nothing to you.
-3. **Never define a term.** Say what it does for the viewer instead. Headroom
-   is described as sitting between you and your model and passing through only
-   what matters. The words "proxy" and "context compression" never appear.
+3. **Never define a term.** Say what it does for the viewer instead. One
+   script describes a proxy tool as sitting between you and your model and
+   passing through only what matters. The words "proxy" and "context
+   compression" never appear.
 
 **No em dashes** (house style rule; keep it or swap in your own). Commas,
 full stops, or "so".
@@ -306,19 +308,20 @@ full stops, or "so".
 Measured from frame extraction, cut detection, and word-level timestamps on
 the 2.5m, 547k and 51.3k videos.
 
-Split into what you decide at the keyboard and what you hand to whoever cuts
-it. When an edit workflow exists and there is real footage to work from, the
-second block lifts out into its own skill. Until then it lives here and ships
-as a handoff block in the script output.
+Split into what you decide at the keyboard and what you hand to the edit
+stage. The `tool-reel-edit` skill covers the second block in full depth; it
+is summarised here so the script output can ship a self-contained handoff.
+Where the two disagree on a number, the edit skill wins — its measurements
+are frame-accurate.
 
 ### Decide while writing
 
 **On-screen text is word-synced captions, not a second angle.** The most
-important item here, because it is a negative instruction. Chris Chong's
-POV scripting system runs the text hook and the spoken hook as two
-*different* angles. This format does not. Its burned-in captions show one to three
-words at a time, matching exactly what he is saying at that instant. Do not
-write a separate written hook. There is no second angle to invent.
+important item here, because it is a negative instruction. Many POV scripting
+systems run the text hook and the spoken hook as two *different* angles. This
+format does not. Its burned-in captions show one to two words at a time,
+matching exactly what is being said at that instant. Do not write a separate
+written hook. There is no second angle to invent.
 
 **Mark the emphasis word on every line.** Captions switch typeface mid-sentence
 to carry emphasis: serif italic caps on the beat's key word (THAT, EDITOR,
@@ -338,14 +341,16 @@ absent entirely:
 This affects the writing. A beat with no face on screen can carry a longer
 sentence, because nothing is competing for attention.
 
-**Budget two to three visual changes per beat.** Roughly one per sentence. This
-is a writing-time decision because it tells you how much B-roll to gather
-before you shoot, and a beat you cannot illustrate is a beat to cut.
+**Budget three to five shots per beat**, roughly one visual change per
+sentence and often more. This is a writing-time decision because it tells you
+how much B-roll to gather before you shoot, and a beat you cannot illustrate
+is a beat to cut.
 
 ### Hand to the editor
 
-**Cut every ~2.3 seconds.** 19 visual changes in 43.8s, 14 in 30.8s, 13 in
-30.6s. Consistent across all three sampled videos.
+**Cut every ~2 seconds.** 19 visual changes in 43.8s, 14 in 30.8s, 13 in
+30.6s, consistent across all three sampled videos. The edit skill's
+frame-accurate figure is a 2.0s mean shot; aim there.
 
 **Continuous music bed, about 10dB under the voice.** Measured in the speech
 gaps: music alone sits around -27dB, voice-over-music around -17dB, whole file
@@ -442,7 +447,7 @@ Run before recording. Any ✗ means rewrite, not reshoot.
 - [ ] Listicle: spoken ordinals, last item opens "And finally"
 - [ ] Listicle over five items: withheld remainder in the CTA
 - [ ] Single tool: re-hook at 60 to 70% through
-- [ ] Zero "I" outside the CTA, zero references to the visuals
+- [ ] Zero references to the visuals
 - [ ] CTA is ~4s, one keyword, ends in "directly", asks for one action
 - [ ] Caption opens `Comment "KEYWORD" to get...`
 - [ ] No em dashes
@@ -524,8 +529,9 @@ Run before recording. Any ✗ means rewrite, not reshoot.
 
 ## Output format
 
-The same layout in chat and on the Notion page. The core rule: **the script
-is teleprompter-clean, and everything else lives around it, not inside it.**
+The same layout in chat and on the script page (Notion or markdown). The core
+rule: **the script is teleprompter-clean, and everything else lives around it,
+not inside it.**
 
 ```
 ## Script
@@ -542,8 +548,8 @@ VERIFY BEFORE SHOOTING: [numbers with their as-of date; re-check on record day]
 NOTE: [anything else the shoot or the DM payload depends on]
 
 ## Editor handoff
-Cut rate: ~2.3s per shot, about N visual changes across Ns.
-Captions: word-synced, 1-3 words at a time. Serif italic caps on the emph
+Cut rate: ~2s per shot, about N visual changes across Ns.
+Captions: word-synced, 1-2 words at a time. Serif italic caps on the emph
 words in the shot notes, sans bold on everything else, colour accent on [KEYWORD].
 Music: continuous bed, never drops out. No moment of true silence.
 Pauses: none, except about 0.2s at each beat boundary. Cut the breaths.
