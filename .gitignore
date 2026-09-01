@@ -10,7 +10,9 @@ template/public/*
 !template/public/shots/
 template/public/shots/*
 !template/public/shots/.gitkeep
-*-edit/
+
+# per-video edit projects (root level only; must not swallow .claude/skills/tool-reel-edit)
+/*-edit/
 
 # scratch audio the scripts drop while working
 scripts/.*.wav
