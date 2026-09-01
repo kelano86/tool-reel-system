@@ -7,7 +7,7 @@ type Chunk = { text: string; from: number; to: number; emph: boolean };
 const data = captions as Record<string, Chunk[]>;
 
 /**
- * Word-synced captions, 1-2 words at a time (measured: Saraev changes caption
+ * Word-synced captions, 1-2 words at a time (measured: the reference changes caption
  * roughly every 0.42s).
  *
  * Two treatments, and the rule is not purely about emphasis:

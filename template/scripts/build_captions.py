@@ -34,7 +34,7 @@ PROMPTS = {
     "cta": "So if you want to try these yourself, just comment ANIMATE down below and I will send you both of the links directly.",
 }
 
-MAX_WORDS = 2        # words on screen at once (measured: Saraev runs 1-2)
+MAX_WORDS = 2        # words on screen at once (measured: the reference runs 1-2)
 MAX_CHUNK_SEC = 0.6  # a chunk never lingers longer than this (~0.42s typical)
 
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())

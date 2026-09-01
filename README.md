@@ -5,10 +5,11 @@ the heavy lifting: one skill writes the script, one skill cuts the edit.
 You film one talking-head take in the middle. Everything else is automated
 and verifiable.
 
-Built by [FreshStack](https://freshstack.ai) and given away in full. The
-format is reverse-engineered from 16 reels by Nick Saraev (630k followers),
-transcribed with view counts attached, then codified into instructions an
-agent can follow every time. The receipts are in `research/`.
+Built by Baptiste Odonovan and given away in full. The format is
+reverse-engineered from 16 reels by one of the biggest creators in the
+AI-tools niche (630k followers), transcribed with view counts attached,
+then codified into instructions an agent can follow every time. The
+receipts are in `research/`.
 
 ## What's in the box
 
@@ -64,11 +65,9 @@ If you want to do it manually instead, the prerequisites and steps are in
 - Never fabricate a number on screen or in a script. Star counts and claims
   are one click from being checked, and this whole format runs on borrowed
   credibility. The skills enforce this; do not fight them on it.
-- The raw transcripts of the studied reels are not included. That is Nick
-  Saraev's content, not ours. The analysis is.
+- The raw transcripts of the studied reels are not included, only the
+  analysis. The transcripts are the studied creator's content, not ours.
 
 ## Credit
 
-Formula and edit format studied from [Nick Saraev](https://www.instagram.com/nicksaraev)'s
-public reels. System built by [FreshStack](https://freshstack.ai).
-Use it, ship reels, tag us if it works.
+Built by Baptiste Odonovan. Use it, ship reels, tag me if it works.

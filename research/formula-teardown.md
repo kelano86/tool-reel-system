@@ -1,8 +1,8 @@
-# Nick Saraev Reel Formula — Teardown v2
+# Tool Reel Formula — Teardown v2
 
-Corpus: **16 reels**, feed positions 3 to 19, transcribed 2026-08-15.
-Transcripts in [nicksaraf-transcripts.md](nicksaraf-transcripts.md) (batch 1)
-and [nicksaraf-transcripts-batch2.md](nicksaraf-transcripts-batch2.md) (batch 2).
+Corpus: **16 reels** from one top creator in the niche, feed positions 3 to
+19, transcribed 2026-08-15. Full transcripts are not included in this repo;
+they are the studied creator's content, and this analysis is what shipped.
 Account: 630k followers, 388 posts. Niche: AI tooling education.
 Format: talking head plus screen-recording B-roll, comment-gated lead magnet.
 
@@ -317,11 +317,11 @@ the visuals. Worth copying: the entire word budget goes to value.
 unique mechanism, net new value, re-hooks) and is built for talking-head shorts
 where the creator's POV is the product.
 
-The Saraev formula is narrower and faster, tuned for one job: **tool discovery
+This formula is narrower and faster, tuned for one job: **tool discovery
 with a comment-gated lead magnet**. It removes the creator's POV entirely,
 borrows all authority from the tool, and caps at 60 seconds.
 
-| Chris Chong beat | Saraev equivalent |
+| Chris Chong beat | This formula's equivalent |
 |---|---|
 | Hook | Hook, tighter, 4s cap |
 | Primer | Name plus borrowed proof |

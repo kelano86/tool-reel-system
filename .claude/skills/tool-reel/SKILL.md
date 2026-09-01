@@ -1,15 +1,16 @@
 ---
 name: tool-reel
-description: Tool Reel — write short-form AI-tool-discovery scripts (Reels/Shorts, 20-55s) using the Nick Saraev formula reverse-engineered from 16 of his reels with view data. Top-of-funnel awareness plays with a comment-gate CTA. Use when scripting a reel that reviews, lists, or demos an AI tool, plugin, skill, or free resource.
+description: Tool Reel — write short-form AI-tool-discovery scripts (Reels/Shorts, 20-55s) using a formula reverse-engineered from 16 top-performing reels with view data. Top-of-funnel awareness plays with a comment-gate CTA. Use when scripting a reel that reviews, lists, or demos an AI tool, plugin, skill, or free resource.
 ---
 
 # Tool Reel
 
 Turns "this tool is cool" into a shootable 30-second script.
 
-Source: 16 Nick Saraev reels (630k followers), transcribed with view counts
-attached. Full evidence in `research/formula-teardown.md` at the repo root.
-Read it before your first script.
+Source: 16 reels from one top AI-content creator (630k followers),
+transcribed with view counts attached. Full evidence in
+`research/formula-teardown.md` at the repo root. Read it before your
+first script.
 
 **This format is not personal-brand content.** It reviews someone else's tool
 and borrows all its credibility from that tool. Keep it separate from any
@@ -314,8 +315,8 @@ as a handoff block in the script output.
 
 **On-screen text is word-synced captions, not a second angle.** The most
 important item here, because it is a negative instruction. Chris Chong's
-system in `reel-formula` runs the text hook and the spoken hook as two
-*different* angles. Saraev does not. His burned-in captions show one to three
+POV scripting system runs the text hook and the spoken hook as two
+*different* angles. This format does not. Its burned-in captions show one to three
 words at a time, matching exactly what he is saying at that instant. Do not
 write a separate written hook. There is no second angle to invent.
 
@@ -578,7 +579,8 @@ burns more trust than it builds.
 funding, model counts, and "official" claims are all one click from being
 checked, and the whole formula runs on that credibility. Verify or flag.
 
-**Voice.** This formula is Saraev's. Keep the structure and the mechanics,
+**Voice.** This formula is the studied creator's, not yours. Keep the
+structure and the mechanics,
 but decide per script whether "you guys" and the breathless intensifier
 stack sound like you. The parts that are structural (the four beats, the
 "so" clause, borrowed authority, the 4s CTA) transfer cleanly. The parts

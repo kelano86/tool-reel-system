@@ -20,7 +20,7 @@ export const seg = (p: number, a: number, b: number) =>
   });
 
 /**
- * Overshoot-and-settle, which is how Saraev's cards land. They arrive slightly
+ * Overshoot-and-settle, which is how the reference cards land. They arrive slightly
  * large and settle down rather than fading up, which reads as physical.
  */
 const settle = (f: number, delay = 0) =>
@@ -247,7 +247,7 @@ export const VideoTitle: React.FC<{ text: string; local: number; y: number }> = 
  *   2H/3  (1280) caption
  *
  * That gives an even 320px between each element and stops the name crowding the
- * top of the frame. Saraev puts the ordinal in the name slot; we use the repo
+ * top of the frame. The reference puts the ordinal in the name slot; we use the repo
  * name, since the ordinal is already spoken in the line whereas the name is the
  * thing a viewer needs to read.
  *

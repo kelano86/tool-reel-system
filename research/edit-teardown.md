@@ -1,10 +1,10 @@
-# Nick Saraev — Edit Teardown (frame by frame)
+# Tool Reel — Edit Teardown (frame by frame)
 
-Companion to `nicksaraf-formula-teardown.md`, which covers the writing. This one
+Companion to `formula-teardown.md`, which covers the writing. This one
 covers the cut.
 
-Subject: the **2.5m Google video** (`DbOUP9OPDAQ`), his best performer and a
-listicle, so it is the closest match to our 5-repos edit.
+Subject: the **2.5m-view Google video**, the studied creator's best performer
+and a listicle, so it is the closest match to our 5-repos edit.
 
 Method: scene-change detection for exact cut points, a frame sampled just after
 each cut, dense sampling inside single shots to measure motion, and pixel
