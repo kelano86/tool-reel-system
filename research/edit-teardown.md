@@ -4,7 +4,8 @@ Companion to `formula-teardown.md`, which covers the writing. This one
 covers the cut.
 
 Subject: the **2.5m-view Google video**, the studied creator's best performer
-and a listicle, so it is the closest match to our 5-repos edit.
+and a listicle, so it is the closest match to the kind of reel this system
+builds.
 
 Method: scene-change detection for exact cut points, a frame sampled just after
 each cut, dense sampling inside single shots to measure motion, and pixel
@@ -122,7 +123,7 @@ Note the accent is **coral**, not the amber we are using.
 
 ---
 
-## 9. Delta against our current 5-repos build
+## 9. Delta against our first build
 
 Ordered by how much each would change the feel:
 

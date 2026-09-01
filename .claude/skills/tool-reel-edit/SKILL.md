@@ -175,15 +175,14 @@ rather than flickering off in the gaps.
 Three tiers, in order of preference. `scripts/fetch_assets.py` does all of it.
 
 1. **README screenshots.** The best B-roll available: real product UI, already
-   chosen by the maintainer. authentik ships four at 1706x1304, Tencent twelve.
+   chosen by the maintainer. Some repos ship a dozen at full resolution.
    Filter out badges by host (shields.io, trendshift, codecov...), by minimum
    width (480px), and by extreme aspect ratio.
 2. **Project artwork / OG card.** `opengraph.githubassets.com/1/<owner>/<repo>`
-   always exists and is consistent. Some repos ship real character art —
-   book-to-skill has a wizard in `docs/assets/` — which makes a far better title
-   card than an avatar.
-3. **Nothing.** cloudflare/computer has zero images in its README. That repo has
-   to be carried entirely by custom animation.
+   always exists and is consistent. Some repos ship real character art in
+   their docs folders, which makes a far better title card than an avatar.
+3. **Nothing.** Some repos have zero images in their README. Those have to be
+   carried entirely by custom animation.
 
 **Having screenshots does not mean using only screenshots.** Mix them with
 animation. A screenshot shows what the thing looks like; an animation shows what
@@ -196,9 +195,9 @@ second view of the same product shot:
 
 | Fact | Pattern | Example found |
 |---|---|---|
-| `commands` | `` `/word` `` | agent-skills: 8 slash commands |
-| `steps` | numbered list items | book-to-skill: point it, distil, load on demand |
-| `features` | bold labels on bullets | cloudflare: Container, Isolate shell, Isolate JavaScript |
+| `commands` | `` `/word` `` | a CLI repo's list of 8 slash commands |
+| `steps` | numbered list items | a 3-step "how it works" sequence |
+| `features` | bold labels on bullets | a feature list with bold lead-ins |
 
 **When a line names a count, show the things.** "It's eight commands that cover
 your whole dev cycle" is a claim about a specific list, and the list exists in
@@ -226,7 +225,7 @@ its ground colour, and whether the face is on screen.
 
 ```json
 {"to": 109, "kind": "title", "ground": "#F9F9F9", "face": false,
- "name": "Book to Skill", "art": "bts-wizard.png", "rank": "#2", "starsLabel": "21.9k"}
+ "name": "Example Tool", "art": "example-art.png", "rank": "#2", "starsLabel": "21.9k"}
 ```
 
 **Cut on caption boundaries.** Pull the chunk timings and land each cut between
@@ -242,7 +241,7 @@ phrases, never mid-word.
 | `terminal` | a command typing itself |
 | `structure` | light text on a dark ground, for a file or a shape |
 | `facefull` | the face filling the frame |
-| named animations | `transform`, `machine`, `persist`, `memory`, `costswap`, `commands`, `devcycle` — one component each, built for one line |
+| named animations | one bespoke component per line that needs one (a file transforming, a machine booting, a command list arriving) — built for that video, deleted after |
 
 **Ground colour is set by shot type, not chosen per shot.** Two of the three
 cases are fixed; see 14. A single flat ground across the whole video is the
@@ -268,11 +267,11 @@ Not what the product looks like. What is the evidence image? For persistence,
 the evidence is work surviving something that should have destroyed it.
 
 **3. Show the mechanism, not the interface.**
-The strongest shot in the Cloudflare segment works because the file cards never
-move while the sandbox dies around them. That is not decoration, it is the
-architecture: the filesystem lives in the Durable Object and the sandbox is only
-an execution surface. When the animation and the engineering are the same
-picture, it lands.
+The strongest shot in one of our builds showed file cards holding perfectly
+still while the sandbox died around them, because in that product the storage
+genuinely outlives the execution environment. That is not decoration, it is
+the architecture drawn accurately. When the animation and the engineering are
+the same picture, it lands.
 
 **4. Distrust the first image that arrives.**
 Terminal for a CLI. Dashboard for analytics. Chat bubble for AI. Folder for
@@ -295,8 +294,8 @@ for a change of state before reaching for an explanation.
 
 **Where screenshots exist, mix rather than replace.** A screenshot shows what
 the thing looks like; an animation shows what it does. All stills is static, all
-animation looks like a cartoon rather than a product. authentik ships four real
-screenshots, so the question there is what to build *around* them.
+animation looks like a cartoon rather than a product. When a repo ships several
+real screenshots, the question is what to build *around* them.
 
 ## 7. How every video opens (fixed)
 
@@ -432,11 +431,11 @@ Set the title once in `edit.json`:
 
 ## 9. Moving on a screenshot (the sweep)
 
-**A dense screenshot held static is texture, not evidence.** The authentik shot
-is a wall of 30-odd app tiles. At the size a card allows, every logo is about
-40px: you can tell it is a grid of something, but not of what. The line claims
-it connects to the tools you already use, and that claim only lands if AWS,
-Google Cloud and HashiCorp are individually recognisable.
+**A dense screenshot held static is texture, not evidence.** The typical case
+is a screenshot that is a wall of 30-odd app tiles. At the size a card allows,
+every logo is about 40px: you can tell it is a grid of something, but not of
+what. If the line claims the product connects to the tools you already use,
+that claim only lands if the individual logos are recognisable.
 
 So establish wide, zoom into one row, then track along it. Same information, but
 each logo gets a moment at a readable size.
@@ -511,8 +510,8 @@ The sans side measures 0.43 against the 0.482 assumed, so it is already
 conservative and needs nothing. Only the italic bites.
 
 A useful side effect: sizing the serif properly stops the longest chunks
-wrapping at all. "Cloudflare Computer," was breaking onto two lines purely
-because the width cap was too generous to shrink it.
+wrapping at all. On one build the longest chunk was breaking onto two lines
+purely because the width cap was too generous to shrink it.
 
 **Audit found four violations on a build that looked fine:**
 
@@ -521,7 +520,7 @@ because the width cap was too generous to shrink it.
 | Title-card caption | 0.757H | bottom at 1557, inside the UI band |
 | Faceless / full-bleed caption | 0.8H | bottom at 1640, well inside it |
 | Logo row | 5x164 + gaps | right edge 994, into the action rail |
-| Dev-cycle stepper | `boxW = W` | scales to exactly 1080, six labels edge to edge |
+| A stepper animation | `boxW = W` | scales to exactly 1080, six labels edge to edge |
 
 All four were invisible in Studio, which draws the full frame with no chrome.
 **Run the numbers; do not eyeball it.** Concretely:
@@ -536,8 +535,8 @@ print each band's x and y extents against SAFE
 
 That reads the *rendered* geometry rather than the source, which is the point:
 every violation above came from a number that looked right in the code. It also
-catches the second-order ones — it is how the dev-cycle stepper turned up, and
-how the title's 8px overhang did.
+catches the second-order ones — it is how the stepper violation above turned
+up, and how the title's 8px overhang did.
 
 Two things to know when reading the output. **Grain defeats a naive threshold**:
 on a grained ground, use a threshold well above the grain's spread (~70) or
@@ -571,13 +570,13 @@ Composition is fixed and must not be re-derived per video:
 ```
  group bottom at y=665, growing upward:
      rank        "#2"            96px  sans bold, ink
-     name        "Book to Skill" ladder below, coral serif italic
+     name        "Example Tool"  ladder below, coral serif italic
      stars       "* 21.9k stars" 54px  sans bold, ink
  H/2   (960)     logo, 440px rounded square, dead centre
  0.71H  (1363)   caption  (LOW_CAPTION)
 ```
 
-Name size ladder, because "authentik" and "TencentDB Agent Memory" share the
+Name size ladder, because a 9-character name and a 21-character one share the
 slot: `<=10 chars: 140` / `<=14: 112` / `<=18: 92` / `else 78`. Names up to 18
 characters are held on one line with `nowrap`.
 
@@ -739,7 +738,7 @@ exception and should say so in a comment.
 
 ### The pop-out face shot (optional variant)
 
-Reverse-engineered off a Kalloway reel. The camera card is a wide letterbox
+Reverse-engineered off another creator's reel. The camera card is a wide letterbox
 strip whose top edge cuts through the speaker's head, and the head sits **in
 front of** that edge with nothing behind it. It is not a crop. It is two copies
 of the same footage at the same transform:
@@ -768,9 +767,9 @@ behind it, or a graded lift on the card itself. Not a drop shadow - see section
 14, shadows do nothing on a dark ground. `PopoutFaceShot` keeps `borderWidth`
 as an escape hatch defaulting to 0.
 
-If an outline ever does go back on, it is `--rim` or Orange `#D46E32`, never
-red: the brief reserves Red `#B33A3A` for negative / "don't" signals only, so a
-red card edge says the wrong thing on every shot it appears in.
+If an outline ever does go back on, it is `--rim` or a warm accent, never
+red: reserve red for negative / "don't" signals only, so a red card edge does
+not say the wrong thing on every shot it appears in.
 
 **Clip layer 2 to `y < cardTop`.** Not decoration. The cut-out is a full frame,
 so without the clip its shoulders hang outside the card's left and right edges
@@ -1125,8 +1124,8 @@ needs logos, screenshots and animations, not more cutting. Harvest before
 designing, because what a repo ships decides what its sequence can be.
 
 **Say what the line says.** Every shot should prove the sentence under it.
-book-to-skill's line is "point it at any book and it turns the whole thing into
-a skill", so the sequence is a command being typed, a file going in, and a
+One build's line was "point it at any book and it turns the whole thing into
+a skill", so the sequence was a command being typed, a file going in, and a
 structured skill coming out. Decorative B-roll that does not track the words is
 the difference between a good edit and a stock one.
 
