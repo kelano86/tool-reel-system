@@ -1,0 +1,70 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  *{margin:0;padding:0} body{background:#FFFFFF} svg{display:block}
+  text{font-family:'Segoe UI',Arial,sans-serif}
+  .mono{font-family:Consolas,'Courier New',monospace}
+</style>
+<svg width="1320" height="1695" viewBox="0 0 1760 2260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6E7A73"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="0" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#6E7A73"/></marker>
+  </defs>
+
+  <text x="340" y="70" class="mono" font-size="34" letter-spacing="6" fill="#E7896D">SPLIT-SCREEN GEOMETRY</text>
+  <text x="340" y="122" font-size="44" font-weight="700" fill="#16201C">The standard shot: B-roll top, camera bottom · #050706 + grain</text>
+
+  <!-- frame, dark -->
+  <rect x="340" y="160" width="1080" height="1920" fill="#0B0D0C" stroke="#16201C" stroke-width="3"/>
+
+  <!-- b-roll zone: 0 -> 0.46H (883) -->
+  <rect x="352" y="172" width="1056" height="859" fill="none" stroke="#C8C0B0" stroke-width="2.5" stroke-dasharray="12 9" opacity="0.8"/>
+  <text x="372" y="220" class="mono" font-size="28" fill="#C8C0B0">B-ROLL ZONE · full width · y 0 &#8594; 0.46H (883px)</text>
+
+  <!-- centred content sample: 880 wide card -->
+  <rect x="440" y="400" width="880" height="400" rx="28" fill="#F4F5F1"/>
+  <text x="880" y="580" class="mono" font-size="30" fill="#16201C" text-anchor="middle">content: centred on BOTH axes</text>
+  <text x="880" y="626" class="mono" font-size="30" fill="#16201C" text-anchor="middle">width &#8804; 880px (SAFE_CENTRED_W)</text>
+  <line x1="440" y1="850" x2="1320" y2="850" stroke="#E7896D" stroke-width="3" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <text x="880" y="890" class="mono" font-size="28" fill="#E7896D" text-anchor="middle">880 max · in pixels, never %</text>
+
+  <!-- caption line at H/2 -->
+  <line x1="340" y1="1120" x2="1420" y2="1120" stroke="#E7896D" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="880" y="1146" font-size="52" font-weight="800" fill="#F5F0E8" text-anchor="middle">caption at H/2 with face</text>
+
+  <!-- face box -->
+  <path d="M 362 1272 q 0 -46 46 -46 h 944 q 46 0 46 46 v 808 h -1036 z" fill="#16201C" stroke="#C8C0B0" stroke-width="1.5" opacity="0.98"/>
+  <circle cx="880" cy="1560" r="130" fill="#6E7A73"/>
+  <path d="M 640 2080 q 0 -240 240 -240 q 240 0 240 240 z" fill="#6E7A73"/>
+  <text x="880" y="1330" class="mono" font-size="28" fill="#F9F9F9" text-anchor="middle">FACE BOX · 1036 x 854 @ (22, 1066) · r 46</text>
+  <text x="880" y="1370" class="mono" font-size="24" fill="#F9F9F9" text-anchor="middle" opacity="0.75">0.79x downscale of landscape footage — stays sharp</text>
+
+  <!-- left annotations -->
+  <line x1="270" y1="1031" x2="352" y2="1031" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="256" y="1023" class="mono" font-size="28" fill="#16201C" text-anchor="end">y 883</text>
+  <text x="256" y="1057" class="mono" font-size="22" fill="#6E7A73" text-anchor="end">0.46H · zone ends</text>
+  <line x1="270" y1="1120" x2="340" y2="1120" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="256" y="1112" class="mono" font-size="28" fill="#16201C" text-anchor="end">y 960</text>
+  <text x="256" y="1146" class="mono" font-size="22" fill="#6E7A73" text-anchor="end">H/2</text>
+  <line x1="270" y1="1226" x2="362" y2="1226" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="256" y="1218" class="mono" font-size="28" fill="#16201C" text-anchor="end">y 1066</text>
+  <text x="256" y="1252" class="mono" font-size="22" fill="#6E7A73" text-anchor="end">0.555H · face top</text>
+
+  <!-- right annotations -->
+  <line x1="1420" y1="1523" x2="1490" y2="1523" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <text x="1500" y="1515" class="mono" font-size="28" fill="#16201C">y 1363 · 0.71H</text>
+  <text x="1500" y="1551" class="mono" font-size="22" fill="#6E7A73">caption here on</text>
+  <text x="1500" y="1581" class="mono" font-size="22" fill="#6E7A73">faceless shots</text>
+  <line x1="1470" y1="172" x2="1470" y2="1031" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <line x1="1408" y1="172" x2="1490" y2="172" stroke="#6E7A73" stroke-width="1.5"/>
+  <line x1="1408" y1="1031" x2="1490" y2="1031" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="1500" y="610" class="mono" font-size="30" fill="#16201C">883</text>
+
+  <!-- canvas label -->
+  <text x="340" y="2124" class="mono" font-size="28" fill="#6E7A73">CANVAS 1080 x 1920 · 60fps · full-bleed face = 1.78x upscale — accent only</text>
+
+  <!-- footnotes -->
+  <text x="340" y="2172" font-size="30" fill="#16201C">&#8226; Top-zone formula: wrapper <tspan class="mono" font-size="27">absolute inset-0 flex center</tspan> · content <tspan class="mono" font-size="27">width &#8804; 880, border-box</tspan>.</text>
+  <text x="340" y="2214" font-size="30" fill="#16201C">&#8226; A bare element does not centre, it <tspan font-weight="700">pins to the top-left</tspan>. The wrapper does the centring.</text>
+  <text x="340" y="2256" font-size="30" fill="#16201C">&#8226; Percentages resolve against the 883px zone, not the frame — pass frame positions in pixels.</text>
+</svg>

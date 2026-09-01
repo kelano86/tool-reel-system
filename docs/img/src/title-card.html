@@ -1,0 +1,76 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  *{margin:0;padding:0} body{background:#FFFFFF} svg{display:block}
+  text{font-family:'Segoe UI',Arial,sans-serif}
+  .mono{font-family:Consolas,'Courier New',monospace}
+</style>
+<svg width="1320" height="1695" viewBox="0 0 1760 2260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6E7A73"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="0" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#6E7A73"/></marker>
+  </defs>
+
+  <text x="340" y="70" class="mono" font-size="34" letter-spacing="6" fill="#E7896D">THE TITLE CARD · LOCKED FORMAT</text>
+  <text x="340" y="122" font-size="44" font-weight="700" fill="#16201C">Opens every list item · ~1.5s · no face · identical every time</text>
+
+  <!-- frame -->
+  <rect x="340" y="160" width="1080" height="1920" fill="#F9F9F9" stroke="#16201C" stroke-width="3"/>
+
+  <!-- text group, bottom-anchored at frame y 665 (canvas 825) -->
+  <text x="880" y="560" font-size="96" font-weight="800" fill="#16201C" text-anchor="middle">#2</text>
+  <text x="880" y="700" font-size="112" font-style="italic" font-weight="700" font-family="Georgia,serif" fill="#E7896D" text-anchor="middle">Example Tool</text>
+  <text x="880" y="800" font-size="54" font-weight="800" fill="#16201C" text-anchor="middle">&#9733; 21.9k stars</text>
+
+  <!-- group bottom anchor line -->
+  <line x1="480" y1="825" x2="1280" y2="825" stroke="#E7896D" stroke-width="3" stroke-dasharray="12 8"/>
+  <line x1="1280" y1="825" x2="1500" y2="825" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="1510" y="817" class="mono" font-size="28" fill="#16201C">group bottom</text>
+  <text x="1510" y="853" class="mono" font-size="28" fill="#16201C">y 665</text>
+  <text x="1510" y="889" class="mono" font-size="22" fill="#6E7A73">anchored here,</text>
+  <text x="1510" y="919" class="mono" font-size="22" fill="#6E7A73">grows upward</text>
+
+  <!-- logo 440 square dead centre at H/2 -->
+  <rect x="660" y="900" width="440" height="440" rx="60" fill="#FFFFFF" stroke="#16201C" stroke-width="3"/>
+  <circle cx="880" cy="1120" r="120" fill="#6E7A73" opacity="0.55"/>
+  <line x1="1100" y1="1120" x2="1500" y2="1120" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 8"/>
+  <text x="1510" y="1112" class="mono" font-size="28" fill="#16201C">logo 440px</text>
+  <text x="1510" y="1148" class="mono" font-size="28" fill="#16201C">dead centre H/2</text>
+  <text x="1510" y="1184" class="mono" font-size="22" fill="#6E7A73">(y 960)</text>
+
+  <!-- caption at 0.71H -->
+  <line x1="340" y1="1523" x2="1420" y2="1523" stroke="#E7896D" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="880" y="1505" font-size="48" font-weight="800" fill="#16201C" text-anchor="middle">caption sits here</text>
+  <line x1="1420" y1="1523" x2="1500" y2="1523" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="1510" y="1515" class="mono" font-size="28" fill="#16201C">y 1363</text>
+  <text x="1510" y="1551" class="mono" font-size="22" fill="#6E7A73">0.71H · LOW_CAPTION</text>
+  <text x="1510" y="1581" class="mono" font-size="22" fill="#6E7A73">(no face on card)</text>
+
+  <!-- element labels, left side -->
+  <line x1="620" y1="530" x2="300" y2="530" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 8"/>
+  <text x="290" y="522" class="mono" font-size="28" fill="#16201C" text-anchor="end">rank · 96px</text>
+  <text x="290" y="556" class="mono" font-size="22" fill="#6E7A73" text-anchor="end">sans bold, ink</text>
+  <line x1="480" y1="665" x2="300" y2="665" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 8"/>
+  <text x="290" y="657" class="mono" font-size="28" fill="#16201C" text-anchor="end">name · ladder</text>
+  <text x="290" y="691" class="mono" font-size="22" fill="#6E7A73" text-anchor="end">coral serif italic</text>
+  <line x1="640" y1="782" x2="300" y2="782" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 8"/>
+  <text x="290" y="774" class="mono" font-size="28" fill="#16201C" text-anchor="end">stars · 54px</text>
+  <text x="290" y="808" class="mono" font-size="22" fill="#6E7A73" text-anchor="end">sans bold, ink</text>
+
+  <!-- ladder table -->
+  <text x="440" y="1750" class="mono" font-size="30" letter-spacing="4" fill="#E7896D">NAME SIZE LADDER</text>
+  <text x="440" y="1800" class="mono" font-size="30" fill="#16201C">&#8804;10 chars   140px</text>
+  <text x="440" y="1844" class="mono" font-size="30" fill="#16201C">&#8804;14 chars   112px</text>
+  <text x="440" y="1888" class="mono" font-size="30" fill="#16201C">&#8804;18 chars    92px</text>
+  <text x="440" y="1932" class="mono" font-size="30" fill="#16201C">longer        78px</text>
+  <text x="440" y="1980" class="mono" font-size="24" fill="#6E7A73">one line (nowrap) up to 18 chars</text>
+  <text x="1000" y="1750" class="mono" font-size="30" letter-spacing="4" fill="#E7896D">ENTRY ANIMATION</text>
+  <text x="1000" y="1800" font-size="30" fill="#16201C">stagger: rank &#8594; name &#8594; logo &#8594; stars</text>
+  <text x="1000" y="1844" font-size="30" fill="#16201C">each lands at 1.14x, settles to 1.0</text>
+  <text x="1000" y="1888" font-size="30" fill="#16201C">over ~16 frames. Nothing fades.</text>
+
+  <!-- footnotes -->
+  <text x="340" y="2148" font-size="30" fill="#16201C">&#8226; Ground is <tspan font-weight="700">always #F9F9F9</tspan>. The card only reads as "new item" punctuation if it is identical every time.</text>
+  <text x="340" y="2190" font-size="30" fill="#16201C">&#8226; The group anchors by its <tspan font-weight="700">bottom</tspan> edge: long names wrap upward, not into the logo.</text>
+  <text x="340" y="2232" font-size="30" fill="#16201C">&#8226; Star counts refetched the same day — a stale number gets corrected in the comments.</text>
+</svg>

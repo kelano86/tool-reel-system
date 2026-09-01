@@ -25,6 +25,8 @@ His mean shot is **2.0 seconds** with a range of 0.26s to 3.43s. A beat of
 spoken script is not one shot, it is three to five. Every time the edit feels
 flat, the answer is almost always another cut with a different composition.
 
+![One beat cut into four shots of ~2s each, grounds varying, face in roughly half](../../../docs/img/shot-rhythm.png)
+
 ---
 
 ## Who does what
@@ -355,6 +357,8 @@ face box       y 1066 down
 Content is centred in its slot. Both slots are horizontally centred on the frame
 (90 + 450 = 540), so anything centred in the frame is centred in its slot.
 
+![The intro layout: title slot 900x200 at (90,240), imagery slot 900x430 at (90,460), caption at H/2, face box below](../../../docs/img/intro-layout.png)
+
 > **Absolute boxes, never fractions.** Every earlier version of this frame
 > positioned its two elements with separate percentages. Two consequences, both
 > of which shipped: percentages resolve against the *containing block*, which on
@@ -478,6 +482,8 @@ usable:  x 35-980,  y 220-1470     (945 x 1250)
 feed preview crops to 1080x1440
 ```
 
+![The Instagram safe zone: chrome bands, the usable area, SAFE_CENTRED_W at 880, lowest caption centre](../../../docs/img/safe-zone.png)
+
 Exported as `SAFE` and checked as part of the verification pass.
 
 **No text outside it, ever.** Video and B-roll may bleed past — the face box
@@ -575,6 +581,8 @@ Composition is fixed and must not be re-derived per video:
  H/2   (960)     logo, 440px rounded square, dead centre
  0.71H  (1363)   caption  (LOW_CAPTION)
 ```
+
+![The title card grid: bottom-anchored text group at y 665, 440px logo at dead centre, caption at 0.71H](../../../docs/img/title-card.png)
 
 Name size ladder, because a 9-character name and a 21-character one share the
 slot: `<=10 chars: 140` / `<=14: 112` / `<=18: 92` / `else 78`. Names up to 18
@@ -701,6 +709,8 @@ broll zone  full width, 0 -> 0.46H  (883px tall)
 captions    H/2 with face, LOW_CAPTION (0.71H) without and on title cards
 ```
 
+![Split-screen geometry: B-roll zone to 0.46H with content centred and capped at 880, caption at H/2, face box below](../../../docs/img/geometry.png)
+
 The face box is a **downscale** (1920x1080 fills 1036x854 at 0.79x) so it stays
 sharp. Full-bleed needs a **1.78x upscale** and is visibly softer — use it as a
 deliberate accent, not a default. If footage is ever shot vertically or in 4K,
@@ -748,6 +758,8 @@ of the same footage at the same transform:
 
 Layer 2 is the whole effect: it is why the head reads against the page ground
 rather than against the room.
+
+![The pop-out face shot: head layered in front of the card's top edge, pop = 0.30 of head height](../../../docs/img/popout.png)
 
 ```
 card       left 69, top 1406, 942 wide, bleeds past the canvas bottom, r=46

@@ -1,0 +1,111 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  *{margin:0;padding:0}
+  body{background:#FFFFFF}
+  svg{display:block}
+  text{font-family:'Segoe UI',Arial,sans-serif}
+  .mono{font-family:Consolas,'Courier New',monospace}
+</style>
+<svg width="1320" height="1695" viewBox="0 0 1760 2260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6E7A73"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="0" refY="4" orient="auto">
+      <path d="M8,0 L0,4 L8,8 z" fill="#6E7A73"/>
+    </marker>
+  </defs>
+
+  <!-- ======= header ======= -->
+  <text x="340" y="70" class="mono" font-size="34" letter-spacing="6" fill="#E7896D">THE INTRO LAYOUT · LOCKED</text>
+  <text x="340" y="122" font-size="44" font-weight="700" fill="#16201C">The opening split screen, 0s to ~2.2s</text>
+
+  <!-- ======= frame 1080x1920 at (340,160) ======= -->
+  <rect x="340" y="160" width="1080" height="1920" fill="#F9F9F9" stroke="#16201C" stroke-width="3"/>
+
+  <!-- title slot 900x200 @ frame (90,240) -->
+  <rect x="430" y="400" width="900" height="200" fill="rgba(231,137,109,0.07)" stroke="#E7896D" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="444" y="392" class="mono" font-size="27" fill="#E7896D">TITLE SLOT · 900 x 200 @ (90, 240)</text>
+  <text x="880" y="486" font-size="72" font-style="italic" font-weight="700" font-family="Georgia,serif" fill="#16201C" text-anchor="middle">5 trending</text>
+  <text x="880" y="570" font-size="72" font-style="italic" font-weight="700" font-family="Georgia,serif" fill="#16201C" text-anchor="middle">GitHub repos</text>
+
+  <!-- imagery slot 900x430 @ frame (90,460) -->
+  <rect x="430" y="620" width="900" height="430" fill="rgba(22,32,28,0.03)" stroke="#E7896D" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="444" y="1036" class="mono" font-size="27" fill="#E7896D">IMAGERY SLOT · 900 x 430 @ (90, 460)</text>
+  <!-- logo row: 5 x 158 + 4 x 22 = 878 wide, centred -->
+  <g>
+    <rect x="441"  y="756" width="158" height="158" rx="24" fill="#FFFFFF" stroke="#16201C" stroke-width="2.5"/>
+    <rect x="621"  y="756" width="158" height="158" rx="24" fill="#FFFFFF" stroke="#16201C" stroke-width="2.5"/>
+    <rect x="801"  y="756" width="158" height="158" rx="24" fill="#FFFFFF" stroke="#16201C" stroke-width="2.5"/>
+    <rect x="981"  y="756" width="158" height="158" rx="24" fill="#FFFFFF" stroke="#16201C" stroke-width="2.5"/>
+    <rect x="1161" y="756" width="158" height="158" rx="24" fill="#FFFFFF" stroke="#16201C" stroke-width="2.5"/>
+    <circle cx="520"  cy="835" r="42" fill="#6E7A73" opacity="0.55"/>
+    <circle cx="700"  cy="835" r="42" fill="#6E7A73" opacity="0.55"/>
+    <circle cx="880"  cy="835" r="42" fill="#6E7A73" opacity="0.55"/>
+    <circle cx="1060" cy="835" r="42" fill="#6E7A73" opacity="0.55"/>
+    <circle cx="1240" cy="835" r="42" fill="#6E7A73" opacity="0.55"/>
+  </g>
+  <text x="880" y="960" class="mono" font-size="26" fill="#6E7A73" text-anchor="middle">e.g. logo row: 5 x 158px + 22px gaps = 878 &#8804; SAFE_CENTRED_W (880)</text>
+
+  <!-- caption centre line y=960 -->
+  <line x1="340" y1="1120" x2="1420" y2="1120" stroke="#E7896D" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="880" y="1142" font-size="58" font-weight="800" fill="#16201C" text-anchor="middle">caption sits here</text>
+
+  <!-- face box: frame (22,1066) 1036x854 r=46, bleeds to bottom -->
+  <path d="M 362 1272 q 0 -46 46 -46 h 944 q 46 0 46 46 v 808 h -1036 z" fill="#16201C"/>
+  <circle cx="880" cy="1560" r="130" fill="#6E7A73"/>
+  <path d="M 640 2080 q 0 -240 240 -240 q 240 0 240 240 z" fill="#6E7A73"/>
+  <text x="880" y="1330" class="mono" font-size="28" fill="#F9F9F9" text-anchor="middle" opacity="0.95">FACE BOX · 1036 x 854 @ (22, 1066) · r 46</text>
+  <text x="880" y="1372" class="mono" font-size="24" fill="#F9F9F9" text-anchor="middle" opacity="0.75">0.79x downscale of 1920x1080 footage · bleeds to frame bottom</text>
+
+  <!-- ======= dimensions, left side ======= -->
+  <line x1="290" y1="160" x2="290" y2="400" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <line x1="270" y1="160" x2="340" y2="160" stroke="#6E7A73" stroke-width="1.5"/>
+  <line x1="270" y1="400" x2="430" y2="400" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="272" y="290" class="mono" font-size="30" fill="#16201C" text-anchor="end">240</text>
+
+  <line x1="270" y1="1120" x2="340" y2="1120" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="256" y="1112" class="mono" font-size="30" fill="#16201C" text-anchor="end">y 960</text>
+  <text x="256" y="1148" class="mono" font-size="24" fill="#6E7A73" text-anchor="end">H/2</text>
+
+  <line x1="270" y1="1226" x2="362" y2="1226" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="256" y="1218" class="mono" font-size="30" fill="#16201C" text-anchor="end">y 1066</text>
+  <text x="256" y="1254" class="mono" font-size="24" fill="#6E7A73" text-anchor="end">0.555H</text>
+
+  <!-- ======= dimensions, right side ======= -->
+  <line x1="1470" y1="400" x2="1470" y2="600" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <line x1="1330" y1="400" x2="1490" y2="400" stroke="#6E7A73" stroke-width="1.5"/>
+  <line x1="1330" y1="600" x2="1490" y2="600" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="1484" y="512" class="mono" font-size="30" fill="#16201C">200</text>
+
+  <line x1="1470" y1="620" x2="1470" y2="1050" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <line x1="1330" y1="620" x2="1490" y2="620" stroke="#6E7A73" stroke-width="1.5"/>
+  <line x1="1330" y1="1050" x2="1490" y2="1050" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="1484" y="846" class="mono" font-size="30" fill="#16201C">430</text>
+
+  <line x1="1470" y1="1226" x2="1470" y2="2080" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <line x1="1398" y1="1226" x2="1490" y2="1226" stroke="#6E7A73" stroke-width="1.5"/>
+  <line x1="1420" y1="2080" x2="1490" y2="2080" stroke="#6E7A73" stroke-width="1.5"/>
+  <text x="1484" y="1662" class="mono" font-size="30" fill="#16201C">854</text>
+
+  <!-- ======= dimensions, top ======= -->
+  <line x1="340" y1="235" x2="430" y2="235" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <text x="385" y="222" class="mono" font-size="28" fill="#16201C" text-anchor="middle">90</text>
+  <line x1="430" y1="235" x2="1330" y2="235" stroke="#6E7A73" stroke-width="2.5" marker-start="url(#a2)" marker-end="url(#a1)"/>
+  <text x="880" y="222" class="mono" font-size="28" fill="#16201C" text-anchor="middle">900</text>
+  <line x1="430" y1="212" x2="430" y2="400" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <line x1="1330" y1="212" x2="1330" y2="400" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+  <!-- centre line -->
+  <line x1="880" y1="160" x2="880" y2="400" stroke="#6E7A73" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.7"/>
+  <text x="892" y="192" class="mono" font-size="24" fill="#6E7A73">x 540 · both slots centred here</text>
+
+  <!-- frame size label -->
+  <text x="340" y="2124" class="mono" font-size="28" fill="#6E7A73">FRAME 1080 x 1920 · 60fps</text>
+
+  <!-- ======= footnotes ======= -->
+  <text x="340" y="2168" font-size="30" fill="#16201C">&#8226; Slots are <tspan font-weight="700">fixed boxes in frame pixels</tspan>, never fractions of a container.</text>
+  <text x="340" y="2210" font-size="30" fill="#16201C">&#8226; Title: serif italic, ink; more than three words always breaks to two lines.</text>
+  <text x="340" y="2252" font-size="30" fill="#16201C">&#8226; Caption sits on H/2 while the face is on screen.</text>
+</svg>
