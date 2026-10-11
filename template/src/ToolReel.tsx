@@ -104,8 +104,8 @@ const BeatAudio: React.FC<{ beat: Placed }> = ({ beat }) => (
       voice.wav is the camera audio mastered for the reel (high-pass, denoise,
       de-ess, mud cut, low shelf for body, presence boost, exciter, dark-top
       cut, 3:1 compression, -1.2dB limiter â€” scripts/master_voice.ps1 has the
-      exact chain). Same timeline as footage.mov, so the srcFrom trims land
-      identically.
+      exact chain). Same timeline as footage.mov (the chain is latency-
+      compensated), so the srcFrom trims land identically.
     */
     src={staticFile(beat.audio ?? 'voice.wav')}
     trimBefore={beat.audio ? 0 : Math.round(beat.srcFrom * edit.fps)}

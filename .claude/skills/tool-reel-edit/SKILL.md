@@ -126,13 +126,15 @@ Preset locked after A/B rounds on real footage — use it as-is for every reel
 unless the creator asks for a change on a specific video:
 
 ```
-ffmpeg -y -i public/footage.mov -vn -af "highpass=f=75,afftdn=nr=12:nf=-32:tn=1,deesser,equalizer=f=260:t=q:w=1.2:g=-3,lowshelf=f=110:g=4,equalizer=f=4200:t=q:w=0.8:g=3,aexciter=amount=1.5:drive=8:freq=5500,highshelf=f=10000:g=-2,acompressor=threshold=-20dB:ratio=3:attack=6:release=150:makeup=3,alimiter=limit=-1.2dB:level=false" -ar 48000 public/voice.wav
+ffmpeg -y -i public/footage.mov -vn -af "highpass=f=75,afftdn=nr=12:nf=-32:tn=1,atrim=start=0.025,asetpts=PTS-STARTPTS,deesser,equalizer=f=260:t=q:w=1.2:g=-3,lowshelf=f=110:g=4,equalizer=f=4200:t=q:w=0.8:g=3,aexciter=amount=1.5:drive=8:freq=5500,highshelf=f=10000:g=-2,acompressor=threshold=-20dB:ratio=3:attack=6:release=150:makeup=3,alimiter=limit=-1.2dB:level=false:latency=1,apad=pad_dur=0.025" -ar 48000 public/voice.wav
 ```
 
 What it is, in order: rumble high-pass, FFT denoiser with noise tracking,
 de-esser, -3dB mud cut at 260Hz, +4dB low shelf at 110Hz (body/depth), +3dB
 presence at 4.2kHz, harmonic exciter (the actual "crisp"), **-2dB cut above
 10kHz** (a darker top; brighten to taste), 3:1 compression, -1.2dB limiter.
+The `atrim`/`asetpts`, `latency=1` and `apad` parts change no sound: they only
+remove the chain's delay (see Latency below).
 
 Hard-won ordering rule: **denoise before any EQ boost or compression.** The v1
 chain boosted the air shelf and compressed first, which pumped the room hiss up
@@ -140,10 +142,23 @@ with the voice — it was immediately audible and read as "not crisp". The
 exciter adds highs by synthesizing harmonics from the mids, so it sharpens the
 voice without lifting the noise floor the way a shelf boost does.
 
-Wiring: every filter in the chain is time-invariant, so `voice.wav` shares
-the footage's timeline sample-for-sample — the per-beat `srcFrom` trims need
-no adjustment. In the beat audio component, change the fallback source from the
-camera file to the master (`staticFile(beat.audio ?? 'voice.wav')`); spliced
+**Latency (fixed 11 Oct 2026).** Two filters delay the audio: afftdn by 25ms
+(its analysis window, at any sample rate) and alimiter by 5ms (its lookahead).
+The preset as first written had no compensation, so `voice.wav` ran ~30ms
+behind the picture: about one frame late on every reel mastered before this
+date. The command above removes both delays: `atrim=start=0.025` right after
+afftdn drops its 25ms, `latency=1` makes alimiter compensate its lookahead,
+and `apad=pad_dur=0.025` puts the 25ms back at the end so the length is
+unchanged. Aligned to the old output it is bit-identical (only the first
+~0.2s of a file differ, while the EQ and compressor settle), and it has 0 lag
+against the camera audio at 48 and 44.1kHz. If the chain ever changes,
+measure it again: cross-correlate `voice.wav` against the camera audio over a
+voiced window and confirm 0 lag before wiring it.
+
+Wiring: with the delay compensated, `voice.wav` shares the footage's timeline
+sample-for-sample — the per-beat `srcFrom` trims need no adjustment. In the
+beat audio component, change the fallback source from the camera file to the
+master (`staticFile(beat.audio ?? 'voice.wav')`); spliced
 beats keep their own pre-spliced files (re-splice those from voice.wav if the
 beat was cut from the camera track). Verify the wav's duration matches the
 source audio before wiring it. Save the exact command as
